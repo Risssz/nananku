@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuesioner Spesial</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Dijawab Sebentar Yaa Nanann ❤️</h1>
+    <form id="quizForm">
+      <div class="question">
+        <p>1. Kamu mau ketemu aku?</p>
+        <input type="radio" name="q1" value="ya" required> Ya<br>
+        <input type="radio" name="q1" value="banget"> Banget<br>
+        <input type="radio" name="q1" value="Ga"> G Mau<br>
+      </div>
+      
+      <div class="question">
+        <p>2. Menurut kamu aku gimana?</p>
+        <input type="radio" name="q2" value="baik" required> Baik<br>
+        <input type="radio" name="q2" value="superbaik"> Super Baik<br>
+        <input type="radio" name="q2" value="jahat"> Jahat<br>
+      </div>
+
+      <div class="question">
+        <p>3. Mau gak aku ajak ke level lebih serius? 😳</p>
+        <input type="radio" name="q3" value="boleh" required> Boleh<br>
+        <input type="radio" name="q3" value="bolehbanget"> Boleh Banget<br>
+        <input type="radio" name="q3" value="tidak">  G<br> <!-- Tambahan ini -->
+      </div>
+      
+
+      <button type="submit">Kumpulinnya Disini</button>
+    </form>
+
+    <div id="result" class="hidden">
+        <h2 class="fade-in">❤️ Mau gak jadi pacarku? ❤️</h2>
+        <div class="button-group">
+          <button onclick="jawab('Mau')">Mau!</button>
+          <button onclick="jawab('Mau Banget')">Mau Bangett!!</button>
+          <button onclick="jawab('Tidak Mau')">Tidak Mau 😢</button>
+        </div>
+      </div>      
+      
+
+    <div id="finalMessage" class="hidden"></div>
+  </div>
+
+  <button id="playButton">Klik Ini Dulu Biar Romantis</button>
+  <audio id="audioPlayer" loop>
+    <source src="assets/music/best.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <script>
+    document.getElementById('playButton').onclick = function() {
+      var audio = document.getElementById('audioPlayer');
+      audio.play(); 
+    };
+  </script>  
+  
+
+  <script src="assets/style/script.js"></script>
+
+</body>
+</html>
